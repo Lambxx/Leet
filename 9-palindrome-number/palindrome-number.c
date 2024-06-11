@@ -3,6 +3,9 @@ bool isPalindrome(int x) {
 if (x<0){
     return false;
 }
+if(x<10){
+    return true;
+}
     int r = 1;
     int z = x;
        
@@ -10,9 +13,7 @@ if (x<0){
         x /= 10;
         r++;
     }
-if(r==1){
-    return true;
-}
+
     char s[100];
     sprintf(s, "%d", z);
     int y = r;
