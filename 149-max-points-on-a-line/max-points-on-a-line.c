@@ -41,6 +41,10 @@ int maxPoints(int** points, int pointsSize, int* pointsColSize) {
             } else {
                 if (max < count){
                 max = count;
+                // We can now skip, these values 
+                //i++;
+                continue;
+
             }
         }
        
