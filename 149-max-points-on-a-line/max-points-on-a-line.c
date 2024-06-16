@@ -13,6 +13,10 @@ int maxPoints(int** points, int pointsSize, int* pointsColSize) {
     // Start with each point, see if it is colinear with 2 other points, if A,B,C colinear, see if A,B,D colinear, count total colinear with A,B pair, move onto next pair 
     int max = 0;
     for (int i =0; i < pointsSize ;i++){
+         // If max is > half of points, then there will be no greater colinear run
+        if(max > (pointsSize/2)){
+            return max;
+        }
         int x1 = points[i][0];
         int y1 = points[i][1];
         for (int z = 0; z < pointsSize;z++){
@@ -39,6 +43,7 @@ int maxPoints(int** points, int pointsSize, int* pointsColSize) {
                 max = count;
             }
         }
+       
     }
     }
       return max;
