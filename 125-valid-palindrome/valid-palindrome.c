@@ -1,6 +1,6 @@
 bool isPalindrome(char* s) {
    
-
+//Update time
     char* sEnd = s + strlen(s) -1;
     char* fVal = s;
     
