@@ -4,7 +4,7 @@ bool isPalindrome(char* s) {
     char* sEnd = s + strlen(s) -1;
     char* fVal = s;
     
-    while(*s && *sEnd && (s<sEnd) && (sEnd > fVal)){
+    while(*s && *sEnd && (s<sEnd) ){
         while (*s && !isalnum(*s) && (s<sEnd)){
             s++;
         } 
